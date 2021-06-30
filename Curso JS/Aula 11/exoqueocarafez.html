@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você é brasileiro? </h1>
+    Digite seu país de origem: <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value='Resposta' onclick="resposta()" >
+    <div id='res'></div>
+    <script>
+        function resposta(){
+            var txtp = window.document.getElementById('txtpaís')
+            var res = window.document.querySelector('div#res')
+            var ppais = txtp.value
+            res.innerHTML += `<p>Você nasceu em <strong>${ppais}</strong></p>`
+            if (ppais!='Brasil'){
+                res.innerHTML += `<p><strong>Você é estrangeiro(a)</strong>!</p>`
+            }
+            else {
+                res.innerHTML += `<p><strong>Você é brasileiro(a)!</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
